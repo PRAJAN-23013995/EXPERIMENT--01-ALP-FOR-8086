@@ -1,7 +1,11 @@
-# EXPERIMENT--01-ALP-FOR-8086
-## Name : PRAJAN P
-## Roll no : 212223240121
-## Date of experiment : 10.03.25
+# EXPERIMENT 01 ALP FOR 8086
+
+Name : PRAJAN P
+
+Roll no :212223240121
+
+Date of experiment : 03/03/2025
+
 
 ## Aim: To Write and execute ALP on fundamental arithmetic and logical operations
 ## Components required: 8086  emulator 
@@ -73,96 +77,78 @@ Running The Emulator (emu8086) Intro 8086 Microprocessor Emulator, also known as
 
 ## Programs for arithmetic  operations
 
-## Addition  of 8 bit ALP 
-```
-Mov AL,74H
-MOV BL,69H
-ADD AL,BL
-HLT
-```
-## Output  
- ![image](https://github.com/user-attachments/assets/09803bdd-7411-49a0-a19a-849f49655b0a)
-
-## Subtraction   of 8 bit numbers  ALP 
-```
-Mov AL,74H
-MOV BL,69H
-SUB AL,BL
-HLT
-```
-## Output  
-![image](https://github.com/user-attachments/assets/929b7249-2bda-49cc-b7bd-691778701d57)
-
-## Multiplication alp 
 ```
 org 100h
-Mov AL,74H
-MOV BL,69H
-MUL BL
-HLT
+
+MOV AX,2345H
+MOV BX,1212H
+ADD AX,BX
+MOV [6000H],AX
+         
+MOV AX,[1000H]
+MOV BX,[1002H]
+SUB AX,BX
+MOV [6002H],AX       
+
+MOV BX,2222H
+MOV AX,BX
+MOV CX,11H
+MOV DX,CX
+MUL DX
+MOV [6004H],AX
+
+MOV BX,1007H
+MOV AX,[BX]
+MOV CX,05H
+DIV CX
+MOV [6006H],AX
+
+
+ 
 ret
 ```
- ## Output  
-![image](https://github.com/user-attachments/assets/6e1c7b85-a922-4e37-8a90-ae6c2f4882e0)
+
+## Output:
+
+![Screenshot 2025-03-12 152809](https://github.com/user-attachments/assets/3189d835-e1c3-444a-a1c0-8a2a3fadaff8)
 
 
-## Division alp 
+## Programs for logical  operations
+
 ```
-MOV AL,68H
-MOV BL,18H
-DIV BL
-HLT
-```
-## Output  
-![image](https://github.com/user-attachments/assets/bc8b241c-c2dc-4956-b257-8f9d7ffa0d7a)
+org 100h
 
-## And of 8 bit numbers ALP
-```assembly
-MOV AL,33H
-MOV BL,44H
-AND AL,BL
-HLT
-```
-## Output
-![image](https://github.com/user-attachments/assets/1f70ed7f-a214-4cb8-999c-adcd31784382)
+MOV AX,2F11H
+MOV BX,1125H
+AND AX,BX
+MOV [2000H],AX
 
+MOV AX,2F11H
+MOV BX,1125H
+OR AX,BX     
+MOV [2002H],AX
 
-## OR of 8 bit numbers ALP
-```assembly
-MOV AL,45H
-MOV BL,66H
-OR AL,BL
-HLT
-```
-## Output
-![image](https://github.com/user-attachments/assets/f2363e83-9f02-4a06-8754-e2a5f5b9cd97)
+MOV AX,2F11H
+NOT AX       
+MOV [2004H],AX
 
+MOV AX,2F11H
+MOV BX,1125H
+XOR AX,BX    
+MOV [2006H],AX
 
-## NOT of 8 bit number ALP
-```assembly
-MOV AL,65H
-NOT AL
-HLT
-```
-## Output
-![image](https://github.com/user-attachments/assets/a29500ad-06ec-44d4-bde9-f5c762d42f20)
-
-
-## XOR of 8 bit number ALP
-```assembly
-MOV AL,66H
-MOV BL,77H
-XOR AL,BL
-HLT
+ret
 ```
 
-## Output
-![image](https://github.com/user-attachments/assets/ec2e9fe5-3ebe-42c7-a9be-54a8a69e4f91)
+## Output:
+
+![Screenshot 2025-03-12 152639](https://github.com/user-attachments/assets/7c8e63b6-9145-4853-b923-7d8f536c77e9)
 
 
 ## Result :
-
-The execution of ALP on fundamental arithmetic and logical operations is successfully completed.
+ 
+Thus Writing and execution ALP on fundamental arithmetic and logical operations have been done and verified.
+ 
 
 
 
